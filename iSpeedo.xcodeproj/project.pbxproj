@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		847A746425AB1EC000EF82D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746325AB1EC000EF82D9 /* AppDelegate.swift */; };
+		847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746525AB1EC000EF82D9 /* SceneDelegate.swift */; };
+		847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746725AB1EC000EF82D9 /* ViewController.swift */; };
+		847A746B25AB1EC000EF82D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847A746925AB1EC000EF82D9 /* Main.storyboard */; };
+		847A746E25AB1EC000EF82D9 /* iSpeedo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 847A746C25AB1EC000EF82D9 /* iSpeedo.xcdatamodeld */; };
+		847A747025AB1EC200EF82D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847A746F25AB1EC200EF82D9 /* Assets.xcassets */; };
+		847A747325AB1EC200EF82D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847A747125AB1EC200EF82D9 /* LaunchScreen.storyboard */; };
+		847A747E25AB1EC200EF82D9 /* iSpeedoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A747D25AB1EC200EF82D9 /* iSpeedoTests.swift */; };
+		847A748925AB1EC200EF82D9 /* iSpeedoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A748825AB1EC200EF82D9 /* iSpeedoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		847A747A25AB1EC200EF82D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847A745825AB1EC000EF82D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847A745F25AB1EC000EF82D9;
+			remoteInfo = iSpeedo;
+		};
+		847A748525AB1EC200EF82D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847A745825AB1EC000EF82D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847A745F25AB1EC000EF82D9;
+			remoteInfo = iSpeedo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		847A746025AB1EC000EF82D9 /* iSpeedo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSpeedo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		847A746325AB1EC000EF82D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		847A746525AB1EC000EF82D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		847A746725AB1EC000EF82D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		847A746A25AB1EC000EF82D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		847A746D25AB1EC000EF82D9 /* iSpeedo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iSpeedo.xcdatamodel; sourceTree = "<group>"; };
+		847A746F25AB1EC200EF82D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		847A747225AB1EC200EF82D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		847A747425AB1EC200EF82D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847A747925AB1EC200EF82D9 /* iSpeedoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSpeedoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		847A747D25AB1EC200EF82D9 /* iSpeedoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSpeedoTests.swift; sourceTree = "<group>"; };
+		847A747F25AB1EC200EF82D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847A748425AB1EC200EF82D9 /* iSpeedoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSpeedoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		847A748825AB1EC200EF82D9 /* iSpeedoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSpeedoUITests.swift; sourceTree = "<group>"; };
+		847A748A25AB1EC200EF82D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		847A745D25AB1EC000EF82D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847A747625AB1EC200EF82D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847A748125AB1EC200EF82D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		847A745725AB1EC000EF82D9 = {
+			isa = PBXGroup;
+			children = (
+				847A746225AB1EC000EF82D9 /* iSpeedo */,
+				847A747C25AB1EC200EF82D9 /* iSpeedoTests */,
+				847A748725AB1EC200EF82D9 /* iSpeedoUITests */,
+				847A746125AB1EC000EF82D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		847A746125AB1EC000EF82D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				847A746025AB1EC000EF82D9 /* iSpeedo.app */,
+				847A747925AB1EC200EF82D9 /* iSpeedoTests.xctest */,
+				847A748425AB1EC200EF82D9 /* iSpeedoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		847A746225AB1EC000EF82D9 /* iSpeedo */ = {
+			isa = PBXGroup;
+			children = (
+				847A746325AB1EC000EF82D9 /* AppDelegate.swift */,
+				847A746525AB1EC000EF82D9 /* SceneDelegate.swift */,
+				847A746725AB1EC000EF82D9 /* ViewController.swift */,
+				847A746925AB1EC000EF82D9 /* Main.storyboard */,
+				847A746F25AB1EC200EF82D9 /* Assets.xcassets */,
+				847A747125AB1EC200EF82D9 /* LaunchScreen.storyboard */,
+				847A747425AB1EC200EF82D9 /* Info.plist */,
+				847A746C25AB1EC000EF82D9 /* iSpeedo.xcdatamodeld */,
+			);
+			path = iSpeedo;
+			sourceTree = "<group>";
+		};
+		847A747C25AB1EC200EF82D9 /* iSpeedoTests */ = {
+			isa = PBXGroup;
+			children = (
+				847A747D25AB1EC200EF82D9 /* iSpeedoTests.swift */,
+				847A747F25AB1EC200EF82D9 /* Info.plist */,
+			);
+			path = iSpeedoTests;
+			sourceTree = "<group>";
+		};
+		847A748725AB1EC200EF82D9 /* iSpeedoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				847A748825AB1EC200EF82D9 /* iSpeedoUITests.swift */,
+				847A748A25AB1EC200EF82D9 /* Info.plist */,
+			);
+			path = iSpeedoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		847A745F25AB1EC000EF82D9 /* iSpeedo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847A748D25AB1EC200EF82D9 /* Build configuration list for PBXNativeTarget "iSpeedo" */;
+			buildPhases = (
+				847A745C25AB1EC000EF82D9 /* Sources */,
+				847A745D25AB1EC000EF82D9 /* Frameworks */,
+				847A745E25AB1EC000EF82D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iSpeedo;
+			productName = iSpeedo;
+			productReference = 847A746025AB1EC000EF82D9 /* iSpeedo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		847A747825AB1EC200EF82D9 /* iSpeedoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847A749025AB1EC200EF82D9 /* Build configuration list for PBXNativeTarget "iSpeedoTests" */;
+			buildPhases = (
+				847A747525AB1EC200EF82D9 /* Sources */,
+				847A747625AB1EC200EF82D9 /* Frameworks */,
+				847A747725AB1EC200EF82D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				847A747B25AB1EC200EF82D9 /* PBXTargetDependency */,
+			);
+			name = iSpeedoTests;
+			productName = iSpeedoTests;
+			productReference = 847A747925AB1EC200EF82D9 /* iSpeedoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		847A748325AB1EC200EF82D9 /* iSpeedoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847A749325AB1EC200EF82D9 /* Build configuration list for PBXNativeTarget "iSpeedoUITests" */;
+			buildPhases = (
+				847A748025AB1EC200EF82D9 /* Sources */,
+				847A748125AB1EC200EF82D9 /* Frameworks */,
+				847A748225AB1EC200EF82D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				847A748625AB1EC200EF82D9 /* PBXTargetDependency */,
+			);
+			name = iSpeedoUITests;
+			productName = iSpeedoUITests;
+			productReference = 847A748425AB1EC200EF82D9 /* iSpeedoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		847A745825AB1EC000EF82D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					847A745F25AB1EC000EF82D9 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					847A747825AB1EC200EF82D9 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 847A745F25AB1EC000EF82D9;
+					};
+					847A748325AB1EC200EF82D9 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 847A745F25AB1EC000EF82D9;
+					};
+				};
+			};
+			buildConfigurationList = 847A745B25AB1EC000EF82D9 /* Build configuration list for PBXProject "iSpeedo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 847A745725AB1EC000EF82D9;
+			productRefGroup = 847A746125AB1EC000EF82D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				847A745F25AB1EC000EF82D9 /* iSpeedo */,
+				847A747825AB1EC200EF82D9 /* iSpeedoTests */,
+				847A748325AB1EC200EF82D9 /* iSpeedoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		847A745E25AB1EC000EF82D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847A747325AB1EC200EF82D9 /* LaunchScreen.storyboard in Resources */,
+				847A747025AB1EC200EF82D9 /* Assets.xcassets in Resources */,
+				847A746B25AB1EC000EF82D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847A747725AB1EC200EF82D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847A748225AB1EC200EF82D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		847A745C25AB1EC000EF82D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */,
+				847A746E25AB1EC000EF82D9 /* iSpeedo.xcdatamodeld in Sources */,
+				847A746425AB1EC000EF82D9 /* AppDelegate.swift in Sources */,
+				847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847A747525AB1EC200EF82D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847A747E25AB1EC200EF82D9 /* iSpeedoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847A748025AB1EC200EF82D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847A748925AB1EC200EF82D9 /* iSpeedoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		847A747B25AB1EC200EF82D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 847A745F25AB1EC000EF82D9 /* iSpeedo */;
+			targetProxy = 847A747A25AB1EC200EF82D9 /* PBXContainerItemProxy */;
+		};
+		847A748625AB1EC200EF82D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 847A745F25AB1EC000EF82D9 /* iSpeedo */;
+			targetProxy = 847A748525AB1EC200EF82D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		847A746925AB1EC000EF82D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847A746A25AB1EC000EF82D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		847A747125AB1EC200EF82D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847A747225AB1EC200EF82D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		847A748B25AB1EC200EF82D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		847A748C25AB1EC200EF82D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		847A748E25AB1EC200EF82D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iSpeedo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pmAbi.iSpeedo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		847A748F25AB1EC200EF82D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iSpeedo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pmAbi.iSpeedo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		847A749125AB1EC200EF82D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iSpeedoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pmAbi.iSpeedoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iSpeedo.app/iSpeedo";
+			};
+			name = Debug;
+		};
+		847A749225AB1EC200EF82D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iSpeedoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pmAbi.iSpeedoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iSpeedo.app/iSpeedo";
+			};
+			name = Release;
+		};
+		847A749425AB1EC200EF82D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iSpeedoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pmAbi.iSpeedoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iSpeedo;
+			};
+			name = Debug;
+		};
+		847A749525AB1EC200EF82D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iSpeedoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pmAbi.iSpeedoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iSpeedo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		847A745B25AB1EC000EF82D9 /* Build configuration list for PBXProject "iSpeedo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847A748B25AB1EC200EF82D9 /* Debug */,
+				847A748C25AB1EC200EF82D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847A748D25AB1EC200EF82D9 /* Build configuration list for PBXNativeTarget "iSpeedo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847A748E25AB1EC200EF82D9 /* Debug */,
+				847A748F25AB1EC200EF82D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847A749025AB1EC200EF82D9 /* Build configuration list for PBXNativeTarget "iSpeedoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847A749125AB1EC200EF82D9 /* Debug */,
+				847A749225AB1EC200EF82D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847A749325AB1EC200EF82D9 /* Build configuration list for PBXNativeTarget "iSpeedoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847A749425AB1EC200EF82D9 /* Debug */,
+				847A749525AB1EC200EF82D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		847A746C25AB1EC000EF82D9 /* iSpeedo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				847A746D25AB1EC000EF82D9 /* iSpeedo.xcdatamodel */,
+			);
+			currentVersion = 847A746D25AB1EC000EF82D9 /* iSpeedo.xcdatamodel */;
+			path = iSpeedo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 847A745825AB1EC000EF82D9 /* Project object */;
+}
