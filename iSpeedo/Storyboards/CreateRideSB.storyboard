@@ -15,10 +15,24 @@
                     <view key="view" contentMode="scaleToFill" id="qzq-ys-4W6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJE-3Y-EKW">
+                                <rect key="frame" x="8" y="96" width="398" height="358.5"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Dj5-qr-lbX"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="Dj5-qr-lbX" firstAttribute="trailing" secondItem="sJE-3Y-EKW" secondAttribute="trailing" constant="8" id="9qj-Va-7Mc"/>
+                            <constraint firstItem="sJE-3Y-EKW" firstAttribute="leading" secondItem="Dj5-qr-lbX" secondAttribute="leading" constant="8" id="AJw-Hb-szN"/>
+                            <constraint firstItem="sJE-3Y-EKW" firstAttribute="height" secondItem="qzq-ys-4W6" secondAttribute="height" multiplier="0.4" id="gOJ-d9-kyk"/>
+                            <constraint firstItem="sJE-3Y-EKW" firstAttribute="top" secondItem="Dj5-qr-lbX" secondAttribute="top" constant="8" id="xLR-DI-Rey"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Ride" largeTitleDisplayMode="always" id="vn3-Gr-fAi"/>
+                    <connections>
+                        <outlet property="mapView" destination="sJE-3Y-EKW" id="4bG-uj-16y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HF1-kn-osv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

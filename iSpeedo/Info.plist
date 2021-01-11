@@ -45,6 +45,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location permission is needed to draw the user Path</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location permission is needed to draw the user Path</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Location permission is needed to draw the user Path</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

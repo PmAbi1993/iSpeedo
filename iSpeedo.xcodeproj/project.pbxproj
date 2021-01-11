@@ -13,6 +13,8 @@
 		8479B99225AC4C5300E35F6E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B99125AC4C5300E35F6E /* TabBarController.swift */; };
 		8479B99725AC504800E35F6E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B99625AC504800E35F6E /* Color.swift */; };
 		8479B99C25AC50EB00E35F6E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B99B25AC50EB00E35F6E /* UIView.swift */; };
+		8479B9A225AC561400E35F6E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479B9A125AC561400E35F6E /* MapKit.framework */; };
+		8479B9A825AC57CD00E35F6E /* MapKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B9A725AC57CD00E35F6E /* MapKitViewModel.swift */; };
 		847A746425AB1EC000EF82D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746325AB1EC000EF82D9 /* AppDelegate.swift */; };
 		847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746525AB1EC000EF82D9 /* SceneDelegate.swift */; };
 		847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746725AB1EC000EF82D9 /* ViewController.swift */; };
@@ -51,6 +53,8 @@
 		8479B99125AC4C5300E35F6E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8479B99625AC504800E35F6E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8479B99B25AC50EB00E35F6E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8479B9A125AC561400E35F6E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8479B9A725AC57CD00E35F6E /* MapKitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewModel.swift; sourceTree = "<group>"; };
 		847A746025AB1EC000EF82D9 /* iSpeedo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSpeedo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A746325AB1EC000EF82D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847A746525AB1EC000EF82D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8479B9A225AC561400E35F6E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +109,22 @@
 			path = BaseClasses;
 			sourceTree = "<group>";
 		};
+		8479B9A025AC561400E35F6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8479B9A125AC561400E35F6E /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8479B9A625AC57BF00E35F6E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8479B9A725AC57CD00E35F6E /* MapKitViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		847A745725AB1EC000EF82D9 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +132,7 @@
 				847A747C25AB1EC200EF82D9 /* iSpeedoTests */,
 				847A748725AB1EC200EF82D9 /* iSpeedoUITests */,
 				847A746125AB1EC000EF82D9 /* Products */,
+				8479B9A025AC561400E35F6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +214,7 @@
 		84843E6A25AC3D9A0073763C /* CreateRide */ = {
 			isa = PBXGroup;
 			children = (
+				8479B9A625AC57BF00E35F6E /* ViewModels */,
 				84843E6C25AC3DD80073763C /* CreateRideVC.swift */,
 			);
 			path = CreateRide;
@@ -353,6 +376,7 @@
 				84843E7225AC3DE70073763C /* SettingVC.swift in Sources */,
 				847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */,
 				847A746E25AB1EC000EF82D9 /* iSpeedo.xcdatamodeld in Sources */,
+				8479B9A825AC57CD00E35F6E /* MapKitViewModel.swift in Sources */,
 				847A746425AB1EC000EF82D9 /* AppDelegate.swift in Sources */,
 				84843E6325AC3D390073763C /* RidesVc.swift in Sources */,
 				847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */,
