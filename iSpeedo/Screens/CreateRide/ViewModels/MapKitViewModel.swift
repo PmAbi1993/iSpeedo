@@ -33,6 +33,7 @@ class MapKitViewModel: NSObject {
     var startTime: Date?
     var previousLocation: CLLocation?
     var distance: Double = 0
+    var speedArray: [Double] = []
     init(delegate: MapKitViewModelDelegate) {
         self.delegate = delegate
     }
@@ -73,8 +74,16 @@ extension MapKitViewModel: CLLocationManagerDelegate {
         } else {
             previousLocation = locations.last
         }
+        
+        //Update Average Speed
+        let currentSpeed: Double = currentLocation.speed * 3.6
+        self.speedArray.append(currentSpeed)
+        
+        let averageSpeed = (self.speedArray.reduce(0.0, +)) / Double(speedArray.count)
+        print(averageSpeed)
+        updateModelData(with: .averageSpeed(speed: averageSpeed))
         //Update LiveSpeed from the data
-        updateModelData(with: .liveSpeed(speed: currentLocation.speed * 3.6))
+        updateModelData(with: .liveSpeed(speed: currentSpeed))
         updateModelData(with: .distanceCovered(distance: self.distance))
     }
     func updateModelData(with newData: RideData) {
