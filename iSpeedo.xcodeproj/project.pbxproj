@@ -16,6 +16,9 @@
 		847A747325AB1EC200EF82D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847A747125AB1EC200EF82D9 /* LaunchScreen.storyboard */; };
 		847A747E25AB1EC200EF82D9 /* iSpeedoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A747D25AB1EC200EF82D9 /* iSpeedoTests.swift */; };
 		847A748925AB1EC200EF82D9 /* iSpeedoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A748825AB1EC200EF82D9 /* iSpeedoUITests.swift */; };
+		84843E6325AC3D390073763C /* RidesVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84843E6225AC3D390073763C /* RidesVc.swift */; };
+		84843E6D25AC3DD80073763C /* CreateRideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84843E6C25AC3DD80073763C /* CreateRideVC.swift */; };
+		84843E7225AC3DE70073763C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84843E7125AC3DE70073763C /* SettingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		847A748425AB1EC200EF82D9 /* iSpeedoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSpeedoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A748825AB1EC200EF82D9 /* iSpeedoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSpeedoUITests.swift; sourceTree = "<group>"; };
 		847A748A25AB1EC200EF82D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84843E6225AC3D390073763C /* RidesVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesVc.swift; sourceTree = "<group>"; };
+		84843E6C25AC3DD80073763C /* CreateRideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRideVC.swift; sourceTree = "<group>"; };
+		84843E7125AC3DE70073763C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +110,9 @@
 				847A746325AB1EC000EF82D9 /* AppDelegate.swift */,
 				847A746525AB1EC000EF82D9 /* SceneDelegate.swift */,
 				847A746725AB1EC000EF82D9 /* ViewController.swift */,
-				847A746925AB1EC000EF82D9 /* Main.storyboard */,
+				84843E7625AC3DFA0073763C /* Extensions */,
+				84843E5525AC3CF10073763C /* Screens */,
+				84843E5125AC3CC30073763C /* Storyboards */,
 				847A746F25AB1EC200EF82D9 /* Assets.xcassets */,
 				847A747125AB1EC200EF82D9 /* LaunchScreen.storyboard */,
 				847A747425AB1EC200EF82D9 /* Info.plist */,
@@ -129,6 +137,55 @@
 				847A748A25AB1EC200EF82D9 /* Info.plist */,
 			);
 			path = iSpeedoUITests;
+			sourceTree = "<group>";
+		};
+		84843E5125AC3CC30073763C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				847A746925AB1EC000EF82D9 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		84843E5525AC3CF10073763C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				84843E5E25AC3D190073763C /* Rides */,
+				84843E6A25AC3D9A0073763C /* CreateRide */,
+				84843E6B25AC3DA30073763C /* Settings */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		84843E5E25AC3D190073763C /* Rides */ = {
+			isa = PBXGroup;
+			children = (
+				84843E6225AC3D390073763C /* RidesVc.swift */,
+			);
+			path = Rides;
+			sourceTree = "<group>";
+		};
+		84843E6A25AC3D9A0073763C /* CreateRide */ = {
+			isa = PBXGroup;
+			children = (
+				84843E6C25AC3DD80073763C /* CreateRideVC.swift */,
+			);
+			path = CreateRide;
+			sourceTree = "<group>";
+		};
+		84843E6B25AC3DA30073763C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				84843E7125AC3DE70073763C /* SettingVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		84843E7625AC3DFA0073763C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84843E6D25AC3DD80073763C /* CreateRideVC.swift in Sources */,
+				84843E7225AC3DE70073763C /* SettingVC.swift in Sources */,
 				847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */,
 				847A746E25AB1EC000EF82D9 /* iSpeedo.xcdatamodeld in Sources */,
 				847A746425AB1EC000EF82D9 /* AppDelegate.swift in Sources */,
+				84843E6325AC3D390073763C /* RidesVc.swift in Sources */,
 				847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
