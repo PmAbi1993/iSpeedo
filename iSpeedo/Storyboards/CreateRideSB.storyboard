@@ -28,7 +28,7 @@
         <scene sceneID="Exo-OP-6sO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S5L-Q9-Ra4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Create Ride" id="hhn-Y6-ZFN"/>
+                    <tabBarItem key="tabBarItem" title="Create Ride" image="createRide" id="hhn-Y6-ZFN"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tEk-ub-2uo">
@@ -46,6 +46,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="createRide" width="50" height="50"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

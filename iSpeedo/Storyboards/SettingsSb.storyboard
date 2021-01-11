@@ -40,11 +40,11 @@
             </objects>
             <point key="canvasLocation" x="1184.0579710144928" y="-185.49107142857142"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Settings-->
         <scene sceneID="oiR-7Q-bRQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uRz-I6-eNy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="I1X-vD-8d6"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingsGearIcon" id="I1X-vD-8d6"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TZL-9e-GhL">
@@ -62,6 +62,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="settingsGearIcon" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

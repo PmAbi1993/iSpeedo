@@ -44,7 +44,7 @@
         <scene sceneID="nxr-Gy-2Z8">
             <objects>
                 <navigationController title="Your Rides" automaticallyAdjustsScrollViewInsets="NO" id="r21-JV-08a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ride History" id="8BI-y7-bG5"/>
+                    <tabBarItem key="tabBarItem" title="Ride History" image="rideHistory" id="8BI-y7-bG5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7RB-xK-9ba">
@@ -65,6 +65,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="rideHistory" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
