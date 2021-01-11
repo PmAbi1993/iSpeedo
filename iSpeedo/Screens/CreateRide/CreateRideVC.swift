@@ -9,11 +9,52 @@ import UIKit
 import MapKit
 
 
+enum RideButtonStates {
+    
+    case start
+    case stop
+    
+    var backgroundColor: UIColor {
+        switch self {
+        case .start:
+            return .black
+        case .stop:
+            return .red
+        }
+    }
+    var titleColor: UIColor {
+        switch self {
+        case .start:
+            return .white
+        case .stop:
+            return .white
+        }
+    }
+    var title: String {
+        switch self {
+        case .start:
+            return "Start Ride"
+        case .stop:
+            return "End Ride"
+        }
+    }
+}
+
+
 class CreateRideVC: UIViewController {
 
+    @IBOutlet weak var rideButtonOutlet: UIButton!
     @IBOutlet weak var mapView: MKMapView!
    
-    let locationManager = CLLocationManager()
+    var rideButtonState: RideButtonStates = .start {
+        didSet {
+            self.rideButtonOutlet.backgroundColor = rideButtonState.backgroundColor
+            self.rideButtonOutlet.setTitleColor(rideButtonState.titleColor, for: .normal)
+            self.rideButtonOutlet.setTitle(rideButtonState.title, for: .normal)
+        }
+    }
+    
+    
     lazy var viewModel: MapKitViewModel = {
         let viewModel: MapKitViewModel = MapKitViewModel(delegate: self)
         return viewModel
@@ -30,7 +71,19 @@ class CreateRideVC: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.view.setDefaultBackgroundColor()
+        rideButtonState = .start
     }
+    @IBAction func handleRideButtonAction(_ sender: UIButton) {        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.rideButtonState = (self.rideButtonState == .start) ? .stop : .start
+        }, completion: nil)
+    }
+}
+
+
+extension CreateRideVC {
+    
+    
 }
 
 extension CreateRideVC: MapKitViewModelDelegate {
@@ -49,5 +102,4 @@ extension CreateRideVC: MapKitViewModelDelegate {
         self.mapView.setRegion(region, animated: true)
         self.mapView.showsUserLocation = true
     }
-    
 }

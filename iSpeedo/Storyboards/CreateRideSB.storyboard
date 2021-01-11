@@ -17,21 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJE-3Y-EKW">
-                                <rect key="frame" x="8" y="96" width="398" height="358.5"/>
+                                <rect key="frame" x="8" y="96" width="398" height="269"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1c-5N-dgI">
+                                <rect key="frame" x="8" y="373" width="398" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="t6n-41-NFa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="handleRideButtonAction:" destination="B2J-SQ-qRz" eventType="touchUpInside" id="5Mh-EK-SgR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dj5-qr-lbX"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
+                            <constraint firstItem="L1c-5N-dgI" firstAttribute="top" secondItem="sJE-3Y-EKW" secondAttribute="bottom" constant="8" id="0Z3-10-m0S"/>
                             <constraint firstItem="Dj5-qr-lbX" firstAttribute="trailing" secondItem="sJE-3Y-EKW" secondAttribute="trailing" constant="8" id="9qj-Va-7Mc"/>
                             <constraint firstItem="sJE-3Y-EKW" firstAttribute="leading" secondItem="Dj5-qr-lbX" secondAttribute="leading" constant="8" id="AJw-Hb-szN"/>
-                            <constraint firstItem="sJE-3Y-EKW" firstAttribute="height" secondItem="qzq-ys-4W6" secondAttribute="height" multiplier="0.4" id="gOJ-d9-kyk"/>
+                            <constraint firstItem="L1c-5N-dgI" firstAttribute="leading" secondItem="Dj5-qr-lbX" secondAttribute="leading" constant="8" id="ARk-En-pAJ"/>
+                            <constraint firstItem="Dj5-qr-lbX" firstAttribute="trailing" secondItem="L1c-5N-dgI" secondAttribute="trailing" constant="8" id="FPp-JA-Jg9"/>
+                            <constraint firstItem="sJE-3Y-EKW" firstAttribute="height" secondItem="qzq-ys-4W6" secondAttribute="height" multiplier="0.3" id="gOJ-d9-kyk"/>
                             <constraint firstItem="sJE-3Y-EKW" firstAttribute="top" secondItem="Dj5-qr-lbX" secondAttribute="top" constant="8" id="xLR-DI-Rey"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Ride" largeTitleDisplayMode="always" id="vn3-Gr-fAi"/>
                     <connections>
                         <outlet property="mapView" destination="sJE-3Y-EKW" id="4bG-uj-16y"/>
+                        <outlet property="rideButtonOutlet" destination="L1c-5N-dgI" id="1Hy-3G-fB5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HF1-kn-osv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
