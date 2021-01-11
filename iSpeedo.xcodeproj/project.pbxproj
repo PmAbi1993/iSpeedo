@@ -15,6 +15,7 @@
 		8479B99C25AC50EB00E35F6E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B99B25AC50EB00E35F6E /* UIView.swift */; };
 		8479B9A225AC561400E35F6E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8479B9A125AC561400E35F6E /* MapKit.framework */; };
 		8479B9A825AC57CD00E35F6E /* MapKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B9A725AC57CD00E35F6E /* MapKitViewModel.swift */; };
+		8479B9B025AC6AD200E35F6E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B9AF25AC6AD200E35F6E /* UIViewController.swift */; };
 		847A746425AB1EC000EF82D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746325AB1EC000EF82D9 /* AppDelegate.swift */; };
 		847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746525AB1EC000EF82D9 /* SceneDelegate.swift */; };
 		847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746725AB1EC000EF82D9 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		8479B99B25AC50EB00E35F6E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8479B9A125AC561400E35F6E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8479B9A725AC57CD00E35F6E /* MapKitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewModel.swift; sourceTree = "<group>"; };
+		8479B9AF25AC6AD200E35F6E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		847A746025AB1EC000EF82D9 /* iSpeedo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSpeedo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A746325AB1EC000EF82D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847A746525AB1EC000EF82D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				8479B99625AC504800E35F6E /* Color.swift */,
+				8479B9AF25AC6AD200E35F6E /* UIViewController.swift */,
 				8479B99B25AC50EB00E35F6E /* UIView.swift */,
 			);
 			path = Extensions;
@@ -372,6 +375,7 @@
 			files = (
 				8479B99C25AC50EB00E35F6E /* UIView.swift in Sources */,
 				84843E6D25AC3DD80073763C /* CreateRideVC.swift in Sources */,
+				8479B9B025AC6AD200E35F6E /* UIViewController.swift in Sources */,
 				8479B99225AC4C5300E35F6E /* TabBarController.swift in Sources */,
 				84843E7225AC3DE70073763C /* SettingVC.swift in Sources */,
 				847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */,

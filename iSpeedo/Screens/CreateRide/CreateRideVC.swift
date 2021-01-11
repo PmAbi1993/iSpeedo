@@ -14,11 +14,16 @@ class CreateRideVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
    
     let locationManager = CLLocationManager()
-    
+    lazy var viewModel: MapKitViewModel = {
+        let viewModel: MapKitViewModel = MapKitViewModel(delegate: self)
+        return viewModel
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.delegate = self
-        locationManager.delegate = self
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.startLocationServices()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,11 +32,22 @@ class CreateRideVC: UIViewController {
         self.view.setDefaultBackgroundColor()
     }
 }
-extension CreateRideVC: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("Location Updated")
-    }
-}
 
-extension CreateRideVC: MKMapViewDelegate {
+extension CreateRideVC: MapKitViewModelDelegate {
+    func locationAccessDenied() {
+        self.showAlert(title: "Access Denied",
+                       message: "Location Access is Denied For this device",
+                       okTitle: "Ok")
+    }
+    
+    func locationUpdated(location: CLLocation) {
+        let presentLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
+                                                     longitude: location.coordinate.longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
+        let region = MKCoordinateRegion(center: presentLocation,
+                                        span: span)
+        self.mapView.setRegion(region, animated: true)
+        self.mapView.showsUserLocation = true
+    }
+    
 }
