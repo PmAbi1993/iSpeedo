@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,6 +31,30 @@
                                     <action selector="handleRideButtonAction:" destination="B2J-SQ-qRz" eventType="touchUpInside" id="5Mh-EK-SgR"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rlF-NW-Uhc">
+                                <rect key="frame" x="8" y="421" width="398" height="392"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bkL-jc-6AK">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WtS-Rg-TO4">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Nwm-7T-hYc">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="B2J-SQ-qRz" id="HgY-mR-XvR"/>
+                                    <outlet property="delegate" destination="B2J-SQ-qRz" id="ENI-cb-imc"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dj5-qr-lbX"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -39,7 +64,11 @@
                             <constraint firstItem="sJE-3Y-EKW" firstAttribute="leading" secondItem="Dj5-qr-lbX" secondAttribute="leading" constant="8" id="AJw-Hb-szN"/>
                             <constraint firstItem="L1c-5N-dgI" firstAttribute="leading" secondItem="Dj5-qr-lbX" secondAttribute="leading" constant="8" id="ARk-En-pAJ"/>
                             <constraint firstItem="Dj5-qr-lbX" firstAttribute="trailing" secondItem="L1c-5N-dgI" secondAttribute="trailing" constant="8" id="FPp-JA-Jg9"/>
+                            <constraint firstItem="rlF-NW-Uhc" firstAttribute="leading" secondItem="Dj5-qr-lbX" secondAttribute="leading" constant="8" id="Gd5-Uh-DHO"/>
+                            <constraint firstItem="Dj5-qr-lbX" firstAttribute="bottom" secondItem="rlF-NW-Uhc" secondAttribute="bottom" id="Leo-5Q-czh"/>
+                            <constraint firstItem="Dj5-qr-lbX" firstAttribute="trailing" secondItem="rlF-NW-Uhc" secondAttribute="trailing" constant="8" id="ZWa-P7-18R"/>
                             <constraint firstItem="sJE-3Y-EKW" firstAttribute="height" secondItem="qzq-ys-4W6" secondAttribute="height" multiplier="0.3" id="gOJ-d9-kyk"/>
+                            <constraint firstItem="rlF-NW-Uhc" firstAttribute="top" secondItem="L1c-5N-dgI" secondAttribute="bottom" constant="8" id="q1n-nL-04v"/>
                             <constraint firstItem="sJE-3Y-EKW" firstAttribute="top" secondItem="Dj5-qr-lbX" secondAttribute="top" constant="8" id="xLR-DI-Rey"/>
                         </constraints>
                     </view>
@@ -47,6 +76,7 @@
                     <connections>
                         <outlet property="mapView" destination="sJE-3Y-EKW" id="4bG-uj-16y"/>
                         <outlet property="rideButtonOutlet" destination="L1c-5N-dgI" id="1Hy-3G-fB5"/>
+                        <outlet property="rideDataCollectionView" destination="rlF-NW-Uhc" id="iSa-Vc-36h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HF1-kn-osv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -76,6 +106,9 @@
     </scenes>
     <resources>
         <image name="createRide" width="50" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -10,7 +10,6 @@ import MapKit
 
 
 enum RideButtonStates {
-    
     case start
     case stop
     
@@ -45,22 +44,25 @@ class CreateRideVC: UIViewController {
 
     @IBOutlet weak var rideButtonOutlet: UIButton!
     @IBOutlet weak var mapView: MKMapView!
-   
+    @IBOutlet weak var rideDataCollectionView: UICollectionView!
+    
     var rideButtonState: RideButtonStates = .start {
         didSet {
             self.rideButtonOutlet.backgroundColor = rideButtonState.backgroundColor
             self.rideButtonOutlet.setTitleColor(rideButtonState.titleColor, for: .normal)
             self.rideButtonOutlet.setTitle(rideButtonState.title, for: .normal)
+            rideDataCollectionView.isHidden = rideButtonState == .start
         }
     }
-    
-    
     lazy var viewModel: MapKitViewModel = {
         let viewModel: MapKitViewModel = MapKitViewModel(delegate: self)
         return viewModel
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        rideDataCollectionView.registerCell(cells: [RideDataCell.self])
+        rideDataCollectionView.backgroundColor = .clear
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -81,9 +83,34 @@ class CreateRideVC: UIViewController {
 }
 
 
-extension CreateRideVC {
+extension CreateRideVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
     
-    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: RideDataCell.identifier,
+                                                                            for: indexPath)
+        cell.backgroundColor = UIColor.random
+        return cell
+    }
+}
+
+
+
+extension CreateRideVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width / 2, height: collectionView.frame.height / 2)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .zero
+    }
 }
 
 extension CreateRideVC: MapKitViewModelDelegate {
@@ -101,5 +128,21 @@ extension CreateRideVC: MapKitViewModelDelegate {
                                         span: span)
         self.mapView.setRegion(region, animated: true)
         self.mapView.showsUserLocation = true
+    }
+}
+
+
+extension CGFloat {
+    static var random: CGFloat { return CGFloat(arc4random()) / CGFloat(UInt32.max) }
+}
+
+extension UIColor {
+    static var random: UIColor {
+        return UIColor(
+           red:   .random,
+           green: .random,
+           blue:  .random,
+           alpha: 1.0
+        )
     }
 }
