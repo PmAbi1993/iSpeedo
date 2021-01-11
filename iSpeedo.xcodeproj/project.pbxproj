@@ -11,6 +11,8 @@
 		8479B98725AC43B900E35F6E /* SettingsSb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98625AC43B900E35F6E /* SettingsSb.storyboard */; };
 		8479B98C25AC444700E35F6E /* CreateRideSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98B25AC444700E35F6E /* CreateRideSB.storyboard */; };
 		8479B99225AC4C5300E35F6E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B99125AC4C5300E35F6E /* TabBarController.swift */; };
+		8479B99725AC504800E35F6E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B99625AC504800E35F6E /* Color.swift */; };
+		8479B99C25AC50EB00E35F6E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B99B25AC50EB00E35F6E /* UIView.swift */; };
 		847A746425AB1EC000EF82D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746325AB1EC000EF82D9 /* AppDelegate.swift */; };
 		847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746525AB1EC000EF82D9 /* SceneDelegate.swift */; };
 		847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746725AB1EC000EF82D9 /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		8479B98625AC43B900E35F6E /* SettingsSb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsSb.storyboard; sourceTree = "<group>"; };
 		8479B98B25AC444700E35F6E /* CreateRideSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateRideSB.storyboard; sourceTree = "<group>"; };
 		8479B99125AC4C5300E35F6E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8479B99625AC504800E35F6E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8479B99B25AC50EB00E35F6E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		847A746025AB1EC000EF82D9 /* iSpeedo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSpeedo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A746325AB1EC000EF82D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847A746525AB1EC000EF82D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 		84843E7625AC3DFA0073763C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8479B99625AC504800E35F6E /* Color.swift */,
+				8479B99B25AC50EB00E35F6E /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8479B99C25AC50EB00E35F6E /* UIView.swift in Sources */,
 				84843E6D25AC3DD80073763C /* CreateRideVC.swift in Sources */,
 				8479B99225AC4C5300E35F6E /* TabBarController.swift in Sources */,
 				84843E7225AC3DE70073763C /* SettingVC.swift in Sources */,
@@ -349,6 +356,7 @@
 				847A746425AB1EC000EF82D9 /* AppDelegate.swift in Sources */,
 				84843E6325AC3D390073763C /* RidesVc.swift in Sources */,
 				847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */,
+				8479B99725AC504800E35F6E /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
