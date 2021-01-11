@@ -9,6 +9,49 @@ import UIKit
 import MapKit
 
 
+enum RideData: Equatable {
+    case rideTime(time: TimeInterval)
+    case liveSpeed(speed: Double)
+    case distanceCovered(distance: Double)
+    case averageSpeed(speed: Double)
+
+    var title: String {
+        switch self {
+        case .averageSpeed(speed: _):
+            return "Average Speed"
+        case .rideTime(time: _):
+            return "Total Time"
+        case .liveSpeed(speed: _):
+            return "Live Speed"
+        case .distanceCovered(distance: _):
+            return "Distance Covered"
+        }
+    }
+    var postFix: String {
+        switch self {
+        case .averageSpeed(speed: _), .liveSpeed(speed: _):
+            return " Km/hr"
+        case .distanceCovered(distance: _):
+            return " Km"
+        case .rideTime(time: let time):
+            return " HH:MM:SS"
+        }
+    }
+    var value: String {
+        switch self {
+        case .averageSpeed(speed: let speed), .liveSpeed(speed: let speed):
+            return String(speed) + postFix
+        case .distanceCovered(distance: let distance):
+            return String(distance) + postFix
+        case .rideTime(time: let time):
+            return "Time"
+        }
+    }
+}
+
+
+
+
 enum RideButtonStates {
     case start
     case stop
@@ -46,6 +89,10 @@ class CreateRideVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var rideDataCollectionView: UICollectionView!
     
+    var itemsToPlot: [RideData] = [ .averageSpeed(speed: 0),
+                                    .distanceCovered(distance: 0),
+                                    .liveSpeed(speed: 0),
+                                    .rideTime(time: .leastNormalMagnitude)]
     var rideButtonState: RideButtonStates = .start {
         didSet {
             self.rideButtonOutlet.backgroundColor = rideButtonState.backgroundColor
@@ -85,13 +132,14 @@ class CreateRideVC: UIViewController {
 
 extension CreateRideVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return self.itemsToPlot.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: RideDataCell.identifier,
-                                                                            for: indexPath)
+        guard let cell: RideDataCell = collectionView.dequeueReusableCell(withReuseIdentifier: RideDataCell.identifier,
+                                                                                  for: indexPath) as? RideDataCell else { return UICollectionViewCell() }
         cell.backgroundColor = UIColor.random
+        cell.configureWithItem(data: self.itemsToPlot[indexPath.row])
         return cell
     }
 }
