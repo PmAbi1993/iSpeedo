@@ -47,6 +47,21 @@ enum RideData: Equatable {
             return "Time"
         }
     }
+    
+    static func ~=(lhs: RideData, rhs: RideData) -> Bool {
+        switch (lhs, rhs) {
+        case (.averageSpeed, .averageSpeed):
+            return true
+        case (.liveSpeed, .liveSpeed):
+            return true
+        case (.distanceCovered, .distanceCovered):
+            return true
+        case (.rideTime, .rideTime):
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 
@@ -92,7 +107,11 @@ class CreateRideVC: UIViewController {
     var itemsToPlot: [RideData] = [ .averageSpeed(speed: 0),
                                     .distanceCovered(distance: 0),
                                     .liveSpeed(speed: 0),
-                                    .rideTime(time: .leastNormalMagnitude)]
+                                    .rideTime(time: .leastNormalMagnitude)] {
+        didSet{
+            self.rideDataCollectionView.reloadData()
+        }
+    }
     var rideButtonState: RideButtonStates = .start {
         didSet {
             self.rideButtonOutlet.backgroundColor = rideButtonState.backgroundColor
@@ -159,9 +178,18 @@ extension CreateRideVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .zero
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+
+    }
 }
 
 extension CreateRideVC: MapKitViewModelDelegate {
+    func rideDataUpdated(data: [RideData]) {
+        itemsToPlot = data
+//        rideDataCollectionView.reloadData()
+    }
+    
     func locationAccessDenied() {
         self.showAlert(title: "Access Denied",
                        message: "Location Access is Denied For this device",

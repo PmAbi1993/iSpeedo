@@ -11,10 +11,16 @@ import CoreLocation
 protocol MapKitViewModelDelegate {
     func locationAccessDenied()
     func locationUpdated(location: CLLocation)
+    func rideDataUpdated(data: [RideData])
 }
 
 class MapKitViewModel: NSObject {
     
+    
+    private var dataModel: [RideData] = [ .averageSpeed(speed: 0),
+                                          .distanceCovered(distance: 0),
+                                          .liveSpeed(speed: 0),
+                                          .rideTime(time: .leastNormalMagnitude)]
     private var delegate: MapKitViewModelDelegate?
     private lazy var locationManager: CLLocationManager = {
         
@@ -50,5 +56,14 @@ extension MapKitViewModel: CLLocationManagerDelegate {
             print("The locations array has no elements")
             return }
         self.delegate?.locationUpdated(location: currentLocation)
+        updateModelData(with: .liveSpeed(speed: currentLocation.speed))
+    }
+    func updateModelData(with newData: RideData) {
+        for (index, currentData) in self.dataModel.enumerated() {
+            if currentData ~= newData {
+                dataModel[index] = newData
+            }
+        }
+        self.delegate?.rideDataUpdated(data: self.dataModel)
     }
 }
