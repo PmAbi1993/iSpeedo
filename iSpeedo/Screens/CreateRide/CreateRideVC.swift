@@ -9,6 +9,10 @@ import UIKit
 
 class CreateRideVC: UIViewController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
