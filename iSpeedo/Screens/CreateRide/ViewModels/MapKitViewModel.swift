@@ -20,7 +20,7 @@ class MapKitViewModel: NSObject {
     private var dataModel: [RideData] = [ .averageSpeed(speed: 0),
                                           .distanceCovered(distance: 0),
                                           .liveSpeed(speed: 0),
-                                          .rideTime(time: .leastNormalMagnitude)]
+                                          .rideTime(time: Date())]
     private var delegate: MapKitViewModelDelegate?
     private lazy var locationManager: CLLocationManager = {
         
@@ -30,7 +30,7 @@ class MapKitViewModel: NSObject {
         
     }()
     
-    var initialLocation: CLLocation?
+    var startTime: Date?
     var previousLocation: CLLocation?
     var distance: Double = 0
     init(delegate: MapKitViewModelDelegate) {
@@ -61,6 +61,11 @@ extension MapKitViewModel: CLLocationManagerDelegate {
             return }
         self.delegate?.locationUpdated(location: currentLocation)
         
+        
+        //Update Time Travelled
+        self.startTime = self.startTime ?? Date()
+        updateModelData(with: .rideTime(time: self.startTime ?? Date()))
+
         //Update Total Distance Travelled
         if let previousLocation = self.previousLocation {
             self.distance += (currentLocation.distance(from: previousLocation) / 1000)

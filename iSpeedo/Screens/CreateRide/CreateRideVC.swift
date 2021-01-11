@@ -10,7 +10,7 @@ import MapKit
 
 
 enum RideData: Equatable {
-    case rideTime(time: TimeInterval)
+    case rideTime(time: Date)
     case liveSpeed(speed: Double)
     case distanceCovered(distance: Double)
     case averageSpeed(speed: Double)
@@ -45,7 +45,7 @@ enum RideData: Equatable {
         case .distanceCovered(distance: let distance):
             return String(format: "%.2f", distance) + postFix
         case .rideTime(time: let time):
-            return "Time"
+            return Date().timeIntervalSince(time).stringFromTimeInterval()
         }
     }
     
@@ -108,7 +108,7 @@ class CreateRideVC: UIViewController {
     var itemsToPlot: [RideData] = [ .averageSpeed(speed: 0),
                                     .distanceCovered(distance: 0),
                                     .liveSpeed(speed: 0),
-                                    .rideTime(time: .leastNormalMagnitude)] {
+                                    .rideTime(time: Date())] {
         didSet{
             self.rideDataCollectionView.reloadData()
         }

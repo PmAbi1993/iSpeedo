@@ -53,20 +53,7 @@ class RideDataCell: UICollectionViewCell {
     
     func configureWithItem(data: RideData) {
         self.titleLabel.text = data.title
-        self.dataLabel.text = data.value
-
-        print("Value for \(data): \(data.value)")
-
-//        switch data {
-//        case .averageSpeed(speed: let speed), .liveSpeed(speed: let speed):
-//            self.dataLabel.text = String(speed)// + "Km/hr"
-//        case .distanceCovered(distance: let distance):
-//            self.dataLabel.text = String(distance)
-//        case .rideTime(time: let time):
-//            self.dataLabel.text = "Time"
-//        }
-        
-        
+        self.dataLabel.text = data.value        
     }
 }
 
