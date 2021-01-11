@@ -52,8 +52,6 @@ class RideDataCell: UICollectionViewCell {
     }
     
     func configureWithItem(data: RideData) {
-        
-        
         self.titleLabel.text = data.title
         self.dataLabel.text = data.value
 

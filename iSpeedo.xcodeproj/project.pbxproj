@@ -19,6 +19,7 @@
 		8479B9B625AC85D700E35F6E /* RideDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B9B525AC85D700E35F6E /* RideDataCell.swift */; };
 		8479B9BE25AC86CC00E35F6E /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B9BD25AC86CC00E35F6E /* UICollectionView.swift */; };
 		8479B9C325AC870100E35F6E /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B9C225AC870100E35F6E /* UICollectionViewCell.swift */; };
+		8479B9D325ACAF6400E35F6E /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B9D225ACAF6400E35F6E /* TimeInterval.swift */; };
 		847A746425AB1EC000EF82D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746325AB1EC000EF82D9 /* AppDelegate.swift */; };
 		847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746525AB1EC000EF82D9 /* SceneDelegate.swift */; };
 		847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A746725AB1EC000EF82D9 /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		8479B9B525AC85D700E35F6E /* RideDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDataCell.swift; sourceTree = "<group>"; };
 		8479B9BD25AC86CC00E35F6E /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		8479B9C225AC870100E35F6E /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		8479B9D225ACAF6400E35F6E /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		847A746025AB1EC000EF82D9 /* iSpeedo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSpeedo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847A746325AB1EC000EF82D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847A746525AB1EC000EF82D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				8479B99625AC504800E35F6E /* Color.swift */,
+				8479B9D225ACAF6400E35F6E /* TimeInterval.swift */,
 				8479B9AF25AC6AD200E35F6E /* UIViewController.swift */,
 				8479B99B25AC50EB00E35F6E /* UIView.swift */,
 				8479B9BD25AC86CC00E35F6E /* UICollectionView.swift */,
@@ -391,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8479B99C25AC50EB00E35F6E /* UIView.swift in Sources */,
+				8479B9D325ACAF6400E35F6E /* TimeInterval.swift in Sources */,
 				84843E6D25AC3DD80073763C /* CreateRideVC.swift in Sources */,
 				8479B9C325AC870100E35F6E /* UICollectionViewCell.swift in Sources */,
 				8479B9BE25AC86CC00E35F6E /* UICollectionView.swift in Sources */,

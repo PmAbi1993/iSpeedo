@@ -40,9 +40,10 @@ enum RideData: Equatable {
     var value: String {
         switch self {
         case .averageSpeed(speed: let speed), .liveSpeed(speed: let speed):
-            return String(speed) + postFix
+            return String(format: "%.2f", speed) + postFix
+//            return String(speed) + postFix
         case .distanceCovered(distance: let distance):
-            return String(distance) + postFix
+            return String(format: "%.2f", distance) + postFix
         case .rideTime(time: let time):
             return "Time"
         }
