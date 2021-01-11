@@ -58,7 +58,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="1fC-u0-cfJ">
             <objects>
-                <tabBarController id="WwK-rh-fhc" sceneMemberID="viewController">
+                <tabBarController id="WwK-rh-fhc" customClass="TabBarController" customModule="iSpeedo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S7s-Mb-jCR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
