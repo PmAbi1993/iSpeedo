@@ -122,7 +122,7 @@ class CreateRideVC: UIViewController {
         }
     }
     lazy var viewModel: MapKitViewModel = {
-        let viewModel: MapKitViewModel = MapKitViewModel(delegate: self)
+        let viewModel: MapKitViewModel = MapKitViewModel(delegate: self, mapView: mapView)
         return viewModel
     }()
     
@@ -130,6 +130,7 @@ class CreateRideVC: UIViewController {
         super.viewDidLoad()
         rideDataCollectionView.registerCell(cells: [RideDataCell.self])
         rideDataCollectionView.backgroundColor = .clear
+        mapView.delegate = self
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -148,7 +149,14 @@ class CreateRideVC: UIViewController {
         }, completion: nil)
     }
 }
-
+extension CreateRideVC: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = .red
+        renderer.lineWidth = 3
+        return renderer
+    }
+}
 
 extension CreateRideVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -188,7 +196,6 @@ extension CreateRideVC: UICollectionViewDelegateFlowLayout {
 extension CreateRideVC: MapKitViewModelDelegate {
     func rideDataUpdated(data: [RideData]) {
         itemsToPlot = data
-//        rideDataCollectionView.reloadData()
     }
     
     func locationAccessDenied() {

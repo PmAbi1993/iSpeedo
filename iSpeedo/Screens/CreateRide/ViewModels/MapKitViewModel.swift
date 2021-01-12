@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 protocol MapKitViewModelDelegate {
     func locationAccessDenied()
@@ -34,8 +35,10 @@ class MapKitViewModel: NSObject {
     var previousLocation: CLLocation?
     var distance: Double = 0
     var speedArray: [Double] = []
-    init(delegate: MapKitViewModelDelegate) {
+    var mapView: MKMapView?
+    init(delegate: MapKitViewModelDelegate, mapView: MKMapView) {
         self.delegate = delegate
+        self.mapView = mapView
     }
     func startLocationServices() {
         self.locationManager.requestAlwaysAuthorization()
@@ -61,7 +64,8 @@ extension MapKitViewModel: CLLocationManagerDelegate {
             print("The locations array has no elements")
             return }
         self.delegate?.locationUpdated(location: currentLocation)
-        
+        drawInMap(sourceLocation: previousLocation ?? currentLocation, destination: currentLocation)
+
         
         //Update Time Travelled
         self.startTime = self.startTime ?? Date()
@@ -85,6 +89,7 @@ extension MapKitViewModel: CLLocationManagerDelegate {
         //Update LiveSpeed from the data
         updateModelData(with: .liveSpeed(speed: currentSpeed))
         updateModelData(with: .distanceCovered(distance: self.distance))
+        
     }
     func updateModelData(with newData: RideData) {
         for (index, currentData) in self.dataModel.enumerated() {
@@ -93,5 +98,46 @@ extension MapKitViewModel: CLLocationManagerDelegate {
             }
         }
         self.delegate?.rideDataUpdated(data: self.dataModel)
+    }
+}
+
+
+
+extension MapKitViewModel {
+    func drawInMap(sourceLocation: CLLocation, destination: CLLocation) {
+        
+        guard let mapView = mapView else {
+            print("No Map object exists. Exiting Drawing line")
+            return }
+        
+        let directionRequest = MKDirections.Request()
+        
+        let sourcePosition = CLLocationCoordinate2D(latitude: sourceLocation.coordinate.latitude,
+                                           longitude: sourceLocation.coordinate.longitude)
+        let destinationPosition = CLLocationCoordinate2D(latitude: destination.coordinate.latitude,
+                                                         longitude: destination.coordinate.longitude)
+        
+        
+        directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: sourcePosition))
+        directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationPosition))
+        directionRequest.transportType = .any
+        
+        
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate { (response, error) in
+            if error != nil {
+                print(error?.localizedDescription)
+                return
+            }
+            guard let response = response else {
+                print("Response Not available")
+                return }
+            guard let route = response.routes.first else {
+                print("No routes inside the response")
+                return }
+            mapView.addOverlay(route.polyline, level: .aboveRoads)
+//            let positioningRect = route.polyline.boundingMapRect
+//            mapView.setRegion(MKCoordinateRegion(positioningRect), animated: true)
+        }
     }
 }
