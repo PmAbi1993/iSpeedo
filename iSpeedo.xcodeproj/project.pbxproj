@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843CBEE125ADBD970026573B /* CoreDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CBEE025ADBD970026573B /* CoreDataBase.swift */; };
 		8479B98225AC42B200E35F6E /* RideHistorySb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98125AC42B200E35F6E /* RideHistorySb.storyboard */; };
 		8479B98725AC43B900E35F6E /* SettingsSb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98625AC43B900E35F6E /* SettingsSb.storyboard */; };
 		8479B98C25AC444700E35F6E /* CreateRideSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98B25AC444700E35F6E /* CreateRideSB.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		843CBEE025ADBD970026573B /* CoreDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBase.swift; sourceTree = "<group>"; };
 		8479B98125AC42B200E35F6E /* RideHistorySb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RideHistorySb.storyboard; sourceTree = "<group>"; };
 		8479B98625AC43B900E35F6E /* SettingsSb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsSb.storyboard; sourceTree = "<group>"; };
 		8479B98B25AC444700E35F6E /* CreateRideSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateRideSB.storyboard; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843CBEDF25ADBD840026573B /* CoreDataBase */ = {
+			isa = PBXGroup;
+			children = (
+				843CBEE025ADBD970026573B /* CoreDataBase.swift */,
+			);
+			path = CoreDataBase;
+			sourceTree = "<group>";
+		};
 		8479B99025AC4C3A00E35F6E /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 				847A746325AB1EC000EF82D9 /* AppDelegate.swift */,
 				847A746525AB1EC000EF82D9 /* SceneDelegate.swift */,
 				847A746725AB1EC000EF82D9 /* ViewController.swift */,
+				843CBEDF25ADBD840026573B /* CoreDataBase */,
 				8479B99025AC4C3A00E35F6E /* BaseClasses */,
 				84843E7625AC3DFA0073763C /* Extensions */,
 				84843E5525AC3CF10073763C /* Screens */,
@@ -397,6 +408,7 @@
 				8479B9D325ACAF6400E35F6E /* TimeInterval.swift in Sources */,
 				84843E6D25AC3DD80073763C /* CreateRideVC.swift in Sources */,
 				8479B9C325AC870100E35F6E /* UICollectionViewCell.swift in Sources */,
+				843CBEE125ADBD970026573B /* CoreDataBase.swift in Sources */,
 				8479B9BE25AC86CC00E35F6E /* UICollectionView.swift in Sources */,
 				8479B9B025AC6AD200E35F6E /* UIViewController.swift in Sources */,
 				8479B99225AC4C5300E35F6E /* TabBarController.swift in Sources */,

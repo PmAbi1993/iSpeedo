@@ -59,6 +59,12 @@ class MapKitViewModel: NSObject {
         })
 //        [self.mapView removeOverlays:self.mapView.overlays]
     }
+    
+    func saveRideToDb() {
+        
+        CoreDataBase.default.addNewRide(rideData: self.dataModel)
+        
+    }
 }
 
 extension MapKitViewModel: CLLocationManagerDelegate {
