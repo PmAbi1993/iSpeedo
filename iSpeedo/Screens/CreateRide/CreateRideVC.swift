@@ -119,6 +119,7 @@ class CreateRideVC: UIViewController {
             self.rideButtonOutlet.setTitleColor(rideButtonState.titleColor, for: .normal)
             self.rideButtonOutlet.setTitle(rideButtonState.title, for: .normal)
             rideDataCollectionView.isHidden = rideButtonState == .start
+            self.mapView.showsUserLocation = rideButtonState == .stop
         }
     }
     lazy var viewModel: MapKitViewModel = {
@@ -134,7 +135,7 @@ class CreateRideVC: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.startLocationServices()
+//        viewModel.startLocationServices()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -143,10 +144,41 @@ class CreateRideVC: UIViewController {
         self.view.setDefaultBackgroundColor()
         rideButtonState = .start
     }
-    @IBAction func handleRideButtonAction(_ sender: UIButton) {        
-        UIView.animate(withDuration: 0.3, animations: {
-            self.rideButtonState = (self.rideButtonState == .start) ? .stop : .start
-        }, completion: nil)
+    @IBAction func handleRideButtonAction(_ sender: UIButton) {
+        
+        switch self.rideButtonState {
+        case .start:
+            viewModel.startLocationServices()
+            viewModel.startMonitoringLocation()
+            UIView.animate(withDuration: 0.3, animations: { [weak self] in
+                self?.rideButtonState = .stop
+            }, completion: nil)
+        case .stop:
+            
+            let alertController: UIAlertController = UIAlertController(title: "End Ride",
+                                                                       message: "Are you sure you want to end the ride?",
+                                                                       preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "End Ride", style: .default) { _ in
+                
+                UIView.animate(withDuration: 0.3, animations: { [weak self] in
+                    self?.rideButtonState = .start
+                    self?.viewModel.stopMonitoringLocation()
+                }, completion: nil)
+                
+//                self.rideButtonState = .start
+            }
+            let cancelButton = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
+            alertController.addAction(cancelButton)
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+
+        }
+        
+        
+        
+//        UIView.animate(withDuration: 0.3, animations: {
+//            self.rideButtonState = (self.rideButtonState == .start) ? .stop : .start
+//        }, completion: nil)
     }
 }
 extension CreateRideVC: MKMapViewDelegate {

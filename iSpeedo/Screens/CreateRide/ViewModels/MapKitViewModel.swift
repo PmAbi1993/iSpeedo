@@ -43,6 +43,12 @@ class MapKitViewModel: NSObject {
     func startLocationServices() {
         self.locationManager.requestAlwaysAuthorization()
     }
+    func startMonitoringLocation() {
+        locationManager.startUpdatingLocation()
+    }
+    func stopMonitoringLocation() {
+        locationManager.stopUpdatingLocation()
+    }
 }
 
 extension MapKitViewModel: CLLocationManagerDelegate {
