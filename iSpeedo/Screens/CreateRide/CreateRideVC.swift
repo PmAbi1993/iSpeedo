@@ -41,7 +41,6 @@ enum RideData: Equatable {
         switch self {
         case .averageSpeed(speed: let speed), .liveSpeed(speed: let speed):
             return String(format: "%.2f", speed) + postFix
-//            return String(speed) + postFix
         case .distanceCovered(distance: let distance):
             return String(format: "%.2f", distance) + postFix
         case .rideTime(time: let time):
@@ -135,7 +134,6 @@ class CreateRideVC: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        viewModel.startLocationServices()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -148,6 +146,7 @@ class CreateRideVC: UIViewController {
         
         switch self.rideButtonState {
         case .start:
+            viewModel.clearCurrentRide()
             viewModel.startLocationServices()
             viewModel.startMonitoringLocation()
             UIView.animate(withDuration: 0.3, animations: { [weak self] in
@@ -164,8 +163,6 @@ class CreateRideVC: UIViewController {
                     self?.rideButtonState = .start
                     self?.viewModel.stopMonitoringLocation()
                 }, completion: nil)
-                
-//                self.rideButtonState = .start
             }
             let cancelButton = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
             alertController.addAction(cancelButton)
@@ -173,12 +170,6 @@ class CreateRideVC: UIViewController {
             self.present(alertController, animated: true, completion: nil)
 
         }
-        
-        
-        
-//        UIView.animate(withDuration: 0.3, animations: {
-//            self.rideButtonState = (self.rideButtonState == .start) ? .stop : .start
-//        }, completion: nil)
     }
 }
 extension CreateRideVC: MKMapViewDelegate {

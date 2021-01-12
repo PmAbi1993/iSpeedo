@@ -49,6 +49,16 @@ class MapKitViewModel: NSObject {
     func stopMonitoringLocation() {
         locationManager.stopUpdatingLocation()
     }
+    func clearCurrentRide() {
+        startTime = nil
+        previousLocation = nil
+        distance = 0
+        speedArray = []
+        self.mapView?.overlays.forEach({ [weak self] (overlay) in
+            self?.mapView?.removeOverlay(overlay)
+        })
+//        [self.mapView removeOverlays:self.mapView.overlays]
+    }
 }
 
 extension MapKitViewModel: CLLocationManagerDelegate {
