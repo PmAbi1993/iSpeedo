@@ -1,7 +1,7 @@
 
 # Project Title -iSpeedo
 
-A sample project to obtain Average speed, Distance Travelled
+A sample project to obtain Average speed, Distance Travelled and plot the path in the map.
 
 
 ## Getting Started
