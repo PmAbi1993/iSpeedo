@@ -34,10 +34,10 @@ class RideDataTableCell: UITableViewCell {
 
         print(rideData.distanceTravelled)
         averageSpeedLabel.text = "Average Speed: " + (rideData.averageSpeed ?? "")
-
         distanceLabel.text = "Distance Covered: " + (rideData.distanceTravelled ?? "")
-//
         timeTakenLabel.text =  "Time Taken: " + (rideData.rideTime ?? "")
-
+        guard let date = rideData.startDate else { return }
+        let stringDate = date.getFormattedDate(format: "MMM d, yyyy")
+        startDateLabel.text = "Start Date: " + stringDate
     }
 }

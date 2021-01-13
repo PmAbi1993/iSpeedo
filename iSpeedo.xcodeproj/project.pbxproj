@@ -10,6 +10,7 @@
 		843CBEE125ADBD970026573B /* CoreDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CBEE025ADBD970026573B /* CoreDataBase.swift */; };
 		846AB2C525AECE2A00D1FC27 /* RideDataTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AB2C325AECE2A00D1FC27 /* RideDataTableCell.swift */; };
 		846AB2C625AECE2A00D1FC27 /* RideDataTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846AB2C425AECE2A00D1FC27 /* RideDataTableCell.xib */; };
+		846AB2CB25AED98900D1FC27 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AB2CA25AED98900D1FC27 /* Date.swift */; };
 		8479B98225AC42B200E35F6E /* RideHistorySb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98125AC42B200E35F6E /* RideHistorySb.storyboard */; };
 		8479B98725AC43B900E35F6E /* SettingsSb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98625AC43B900E35F6E /* SettingsSb.storyboard */; };
 		8479B98C25AC444700E35F6E /* CreateRideSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98B25AC444700E35F6E /* CreateRideSB.storyboard */; };
@@ -61,6 +62,7 @@
 		843CBEE025ADBD970026573B /* CoreDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBase.swift; sourceTree = "<group>"; };
 		846AB2C325AECE2A00D1FC27 /* RideDataTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDataTableCell.swift; sourceTree = "<group>"; };
 		846AB2C425AECE2A00D1FC27 /* RideDataTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RideDataTableCell.xib; sourceTree = "<group>"; };
+		846AB2CA25AED98900D1FC27 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8479B98125AC42B200E35F6E /* RideHistorySb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RideHistorySb.storyboard; sourceTree = "<group>"; };
 		8479B98625AC43B900E35F6E /* SettingsSb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsSb.storyboard; sourceTree = "<group>"; };
 		8479B98B25AC444700E35F6E /* CreateRideSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateRideSB.storyboard; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				8479B9D225ACAF6400E35F6E /* TimeInterval.swift */,
 				8479B9AF25AC6AD200E35F6E /* UIViewController.swift */,
 				8479B99B25AC50EB00E35F6E /* UIView.swift */,
+				846AB2CA25AED98900D1FC27 /* Date.swift */,
 				8479B9BD25AC86CC00E35F6E /* UICollectionView.swift */,
 				8479B9C225AC870100E35F6E /* UICollectionViewCell.swift */,
 				84E38CA925AE169400EF3454 /* UITableViewCell.swift */,
@@ -439,6 +442,7 @@
 				8479B9B625AC85D700E35F6E /* RideDataCell.swift in Sources */,
 				84E38CA025AE0DB200EF3454 /* RideVCViewModel.swift in Sources */,
 				847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */,
+				846AB2CB25AED98900D1FC27 /* Date.swift in Sources */,
 				8479B99725AC504800E35F6E /* Color.swift in Sources */,
 				84E38CAF25AE16C800EF3454 /* UITableView.swift in Sources */,
 			);

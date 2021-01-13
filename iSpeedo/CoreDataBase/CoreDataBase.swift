@@ -35,7 +35,7 @@ class CoreDataBase {
         }
     }
 
-    func addNewRide(rideData: [RideData]) {
+    func addNewRide(rideData: [RideData], startDate: Date?) {
         do {
             let rideDbObject = RawRideData(context: self.persistentContainer.viewContext)
             for rideDetail in rideData {
@@ -50,6 +50,7 @@ class CoreDataBase {
                     break
                 }
             }
+            rideDbObject.startDate = startDate
             saveContext()
         } catch {
             print(error.localizedDescription)

@@ -5,8 +5,9 @@
         <attribute name="distanceTravelled" optional="YES" attributeType="String"/>
         <attribute name="rideImage" optional="YES" attributeType="Binary"/>
         <attribute name="rideTime" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="RawRideData" positionX="-54" positionY="-9" width="128" height="89"/>
+        <element name="RawRideData" positionX="-54" positionY="-9" width="128" height="104"/>
     </elements>
 </model>

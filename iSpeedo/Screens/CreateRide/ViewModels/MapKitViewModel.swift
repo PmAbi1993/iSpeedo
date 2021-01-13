@@ -62,7 +62,7 @@ class MapKitViewModel: NSObject {
     
     func saveRideToDb() {
         
-        CoreDataBase.default.addNewRide(rideData: self.dataModel)
+        CoreDataBase.default.addNewRide(rideData: self.dataModel, startDate: self.startTime)
         
     }
 }
