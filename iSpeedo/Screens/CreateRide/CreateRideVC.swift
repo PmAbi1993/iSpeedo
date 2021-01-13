@@ -33,7 +33,7 @@ enum RideData: Equatable {
             return " Km/hr"
         case .distanceCovered(distance: _):
             return " Km"
-        case .rideTime(time: let time):
+        case .rideTime:
             return " HH:MM:SS"
         }
     }

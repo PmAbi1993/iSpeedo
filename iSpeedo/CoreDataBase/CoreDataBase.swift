@@ -45,7 +45,7 @@ class CoreDataBase {
                 case .rideTime:
                     rideDbObject.rideTime = rideDetail.value
                 case .distanceCovered:
-                    rideDbObject.averageSpeed = rideDetail.value
+                    rideDbObject.distanceTravelled = rideDetail.value
                 default:
                     break
                 }
