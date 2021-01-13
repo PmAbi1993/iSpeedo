@@ -37,26 +37,22 @@ class CoreDataBase {
     }
 
     func addNewRide(rideData: [RideData], startDate: Date?, image: UIImage? = nil) {
-        do {
-            let rideDbObject = RawRideData(context: self.persistentContainer.viewContext)
-            for rideDetail in rideData {
-                switch rideDetail {
-                case .averageSpeed:
-                    rideDbObject.averageSpeed = rideDetail.value
-                case .rideTime:
-                    rideDbObject.rideTime = rideDetail.value
-                case .distanceCovered:
-                    rideDbObject.distanceTravelled = rideDetail.value
-                default:
-                    break
-                }
+        let rideDbObject = RawRideData(context: self.persistentContainer.viewContext)
+        for rideDetail in rideData {
+            switch rideDetail {
+            case .averageSpeed:
+                rideDbObject.averageSpeed = rideDetail.value
+            case .rideTime:
+                rideDbObject.rideTime = rideDetail.value
+            case .distanceCovered:
+                rideDbObject.distanceTravelled = rideDetail.value
+            default:
+                break
             }
-            rideDbObject.startDate = startDate
-            rideDbObject.rideImage = image?.pngData()
-            saveContext()
-        } catch {
-            print(error.localizedDescription)
         }
+        rideDbObject.startDate = startDate
+        rideDbObject.rideImage = image?.pngData()
+        saveContext()
     }
     
     func clearAllRides() {

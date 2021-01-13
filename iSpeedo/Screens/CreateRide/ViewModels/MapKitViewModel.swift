@@ -155,7 +155,7 @@ extension MapKitViewModel {
         let directions = MKDirections(request: directionRequest)
         directions.calculate { (response, error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "Error in obtaining directions from mapping")
                 return
             }
             guard let response = response else {
@@ -165,8 +165,6 @@ extension MapKitViewModel {
                 print("No routes inside the response")
                 return }
             mapView.addOverlay(route.polyline, level: .aboveRoads)
-//            let positioningRect = route.polyline.boundingMapRect
-//            mapView.setRegion(MKCoordinateRegion(positioningRect), animated: true)
         }
     }
 }
