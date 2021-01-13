@@ -190,7 +190,7 @@ extension CreateRideVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: RideDataCell = collectionView.dequeueReusableCell(withReuseIdentifier: RideDataCell.identifier,
                                                                                   for: indexPath) as? RideDataCell else { return UICollectionViewCell() }
-        cell.backgroundColor = UIColor.random
+//        cell.backgroundColor = UIColor.random
         cell.configureWithItem(data: self.itemsToPlot[indexPath.row])
         return cell
     }

@@ -31,12 +31,15 @@ class RideDataCell: UICollectionViewCell {
         super.init(frame: frame)
         initialiseViews()
     }
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         initialiseViews()
     }
     func initialiseViews() {
+        
+        contentView.backgroundColor = UIColor(hexString: "#6441A5")//#498EFC
+        contentView.layer.borderWidth = 0.4
+        contentView.layer.borderColor = UIColor.white.cgColor
         
         contentView.addSubview(dataLabel)
         dataLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 0).isActive = true
