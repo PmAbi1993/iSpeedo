@@ -31,8 +31,6 @@ class RideDataTableCell: UITableViewCell {
     }
     
     func configureWith(rideData: RawRideData) {
-
-        print(rideData.distanceTravelled)
         averageSpeedLabel.text = "Average Speed: " + (rideData.averageSpeed ?? "")
         distanceLabel.text = "Distance Covered: " + (rideData.distanceTravelled ?? "")
         timeTakenLabel.text =  "Time Taken: " + (rideData.rideTime ?? "")

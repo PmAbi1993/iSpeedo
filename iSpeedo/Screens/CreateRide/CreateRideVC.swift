@@ -176,7 +176,7 @@ class CreateRideVC: UIViewController {
 extension CreateRideVC: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = .red
+        renderer.strokeColor = SettingsViewModel().getCurrentStrokeColor() ?? .red
         renderer.lineWidth = 3
         return renderer
     }
@@ -190,7 +190,6 @@ extension CreateRideVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: RideDataCell = collectionView.dequeueReusableCell(withReuseIdentifier: RideDataCell.identifier,
                                                                                   for: indexPath) as? RideDataCell else { return UICollectionViewCell() }
-//        cell.backgroundColor = UIColor.random
         cell.configureWithItem(data: self.itemsToPlot[indexPath.row])
         return cell
     }

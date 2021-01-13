@@ -13,7 +13,6 @@ struct RideTableData: Hashable {
     var name: String
 }
 
-
 class RidesVc: UIViewController {
 
     fileprivate enum Section {
@@ -22,7 +21,20 @@ class RidesVc: UIViewController {
 
     @IBOutlet weak var rideHistoryTable: UITableView!
     fileprivate var dataSource: UITableViewDiffableDataSource<Section, RawRideData>!
-    var rideData: [RawRideData] = [RawRideData]()
+    
+    lazy var backgroundView: UILabel = {
+        let label: UILabel = UILabel(frame: rideHistoryTable.frame)
+        label.text = "No Rides saved"
+        label.font = UIFont.boldSystemFont(ofSize: 21)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    var rideData: [RawRideData] = [RawRideData]() {
+        didSet {
+            rideHistoryTable.backgroundView = rideData.isEmpty ? self.backgroundView : nil
+        }
+    }
     var viewModel: RideVCViewModel = RideVCViewModel()
     
     var selectedIndex: Int?
@@ -46,9 +58,6 @@ extension RidesVc: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-       
-        
         
         guard let rideImage = self.rideData[indexPath.row].rideImage else { return }
         guard let image = UIImage(data: rideImage ) else { return }

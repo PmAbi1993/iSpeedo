@@ -12,6 +12,8 @@
 		846AB2C625AECE2A00D1FC27 /* RideDataTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846AB2C425AECE2A00D1FC27 /* RideDataTableCell.xib */; };
 		846AB2CB25AED98900D1FC27 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AB2CA25AED98900D1FC27 /* Date.swift */; };
 		846AB2D025AEE41F00D1FC27 /* PopUpImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AB2CF25AEE41F00D1FC27 /* PopUpImageView.swift */; };
+		846AB2D525AEF18100D1FC27 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AB2D425AEF18100D1FC27 /* PopUp.swift */; };
+		846AB2DA25AEF3FF00D1FC27 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AB2D925AEF3FF00D1FC27 /* SettingsViewModel.swift */; };
 		8479B98225AC42B200E35F6E /* RideHistorySb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98125AC42B200E35F6E /* RideHistorySb.storyboard */; };
 		8479B98725AC43B900E35F6E /* SettingsSb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98625AC43B900E35F6E /* SettingsSb.storyboard */; };
 		8479B98C25AC444700E35F6E /* CreateRideSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98B25AC444700E35F6E /* CreateRideSB.storyboard */; };
@@ -65,6 +67,8 @@
 		846AB2C425AECE2A00D1FC27 /* RideDataTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RideDataTableCell.xib; sourceTree = "<group>"; };
 		846AB2CA25AED98900D1FC27 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		846AB2CF25AEE41F00D1FC27 /* PopUpImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpImageView.swift; sourceTree = "<group>"; };
+		846AB2D425AEF18100D1FC27 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
+		846AB2D925AEF3FF00D1FC27 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		8479B98125AC42B200E35F6E /* RideHistorySb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RideHistorySb.storyboard; sourceTree = "<group>"; };
 		8479B98625AC43B900E35F6E /* SettingsSb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsSb.storyboard; sourceTree = "<group>"; };
 		8479B98B25AC444700E35F6E /* CreateRideSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateRideSB.storyboard; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 			children = (
 				8479B99125AC4C5300E35F6E /* TabBarController.swift */,
 				846AB2CF25AEE41F00D1FC27 /* PopUpImageView.swift */,
+				846AB2D425AEF18100D1FC27 /* PopUp.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				84843E7125AC3DE70073763C /* SettingVC.swift */,
+				846AB2D925AEF3FF00D1FC27 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -436,6 +442,8 @@
 				8479B9B025AC6AD200E35F6E /* UIViewController.swift in Sources */,
 				846AB2C525AECE2A00D1FC27 /* RideDataTableCell.swift in Sources */,
 				8479B99225AC4C5300E35F6E /* TabBarController.swift in Sources */,
+				846AB2DA25AEF3FF00D1FC27 /* SettingsViewModel.swift in Sources */,
+				846AB2D525AEF18100D1FC27 /* PopUp.swift in Sources */,
 				84843E7225AC3DE70073763C /* SettingVC.swift in Sources */,
 				847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */,
 				847A746E25AB1EC000EF82D9 /* iSpeedo.xcdatamodeld in Sources */,
