@@ -83,6 +83,7 @@ class CreateRideVC: UIViewController {
         }
     }
 }
+//MARK:- MEthods which render the lines in the mapview
 extension CreateRideVC: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
@@ -92,6 +93,7 @@ extension CreateRideVC: MKMapViewDelegate {
     }
 }
 
+//MARK:- Collectionview basic delegates
 extension CreateRideVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.itemsToPlot.count
@@ -106,7 +108,7 @@ extension CreateRideVC: UICollectionViewDelegate, UICollectionViewDataSource {
 }
 
 
-
+//MARK:- CollectionView Frame configuration
 extension CreateRideVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width / 2, height: collectionView.frame.height / 2)
@@ -125,7 +127,7 @@ extension CreateRideVC: UICollectionViewDelegateFlowLayout {
 
     }
 }
-
+//MARK:- View Model Delegates
 extension CreateRideVC: MapKitViewModelDelegate {
     func rideDataUpdated(data: [RideData]) {
         itemsToPlot = data
@@ -137,6 +139,7 @@ extension CreateRideVC: MapKitViewModelDelegate {
                        okTitle: "Ok")
     }
     
+    //MARK:- This method will show the users position the map
     func locationUpdated(location: CLLocation) {
         let presentLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
                                                      longitude: location.coordinate.longitude)
@@ -149,17 +152,3 @@ extension CreateRideVC: MapKitViewModelDelegate {
 }
 
 
-extension CGFloat {
-    static var random: CGFloat { return CGFloat(arc4random()) / CGFloat(UInt32.max) }
-}
-
-extension UIColor {
-    static var random: UIColor {
-        return UIColor(
-           red:   .random,
-           green: .random,
-           blue:  .random,
-           alpha: 1.0
-        )
-    }
-}

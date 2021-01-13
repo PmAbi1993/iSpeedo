@@ -7,6 +7,7 @@
 
 import UIKit
 
+//Custom class which acts as popup of imageview with a title
 class PopUpImageView: UIViewController {
 
     var titleLabel: UILabel = {

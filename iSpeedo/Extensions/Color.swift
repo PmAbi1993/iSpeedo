@@ -28,3 +28,15 @@ extension UIColor {
         self.init(red:red, green:green, blue:blue, alpha:1)
     }
 }
+
+
+extension UIColor {
+    static var random: UIColor {
+        return UIColor(
+           red:   .random,
+           green: .random,
+           blue:  .random,
+           alpha: 1.0
+        )
+    }
+}
