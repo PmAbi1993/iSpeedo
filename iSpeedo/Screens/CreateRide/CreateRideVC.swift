@@ -162,6 +162,7 @@ class CreateRideVC: UIViewController {
                 UIView.animate(withDuration: 0.3, animations: { [weak self] in
                     self?.rideButtonState = .start
                     self?.viewModel.stopMonitoringLocation()
+                    self?.viewModel.saveRideToDb()
                 }, completion: nil)
             }
             let cancelButton = UIAlertAction(title: "Continue", style: .cancel, handler: nil)

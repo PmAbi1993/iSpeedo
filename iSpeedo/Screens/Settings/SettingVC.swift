@@ -34,4 +34,18 @@ extension SettingVC: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = "Setting \(indexPath.row)"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let rides = CoreDataBase.default.fetAllRides() else { return }
+        print(rides.count)
+        
+        rides.forEach { (ride) in
+            print(ride.averageSpeed)
+            print(ride.distanceTravelled)
+            print(ride.rideTime)
+        }
+        
+        
+    }
 }

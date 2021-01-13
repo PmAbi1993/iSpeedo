@@ -50,8 +50,6 @@ class CoreDataBase {
                     break
                 }
             }
-            
-//            try self.persistentContainer.viewContext.save()
             saveContext()
         } catch {
             print(error.localizedDescription)

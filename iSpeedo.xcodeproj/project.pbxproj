@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		843CBEE125ADBD970026573B /* CoreDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CBEE025ADBD970026573B /* CoreDataBase.swift */; };
+		846AB2C525AECE2A00D1FC27 /* RideDataTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AB2C325AECE2A00D1FC27 /* RideDataTableCell.swift */; };
+		846AB2C625AECE2A00D1FC27 /* RideDataTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846AB2C425AECE2A00D1FC27 /* RideDataTableCell.xib */; };
 		8479B98225AC42B200E35F6E /* RideHistorySb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98125AC42B200E35F6E /* RideHistorySb.storyboard */; };
 		8479B98725AC43B900E35F6E /* SettingsSb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98625AC43B900E35F6E /* SettingsSb.storyboard */; };
 		8479B98C25AC444700E35F6E /* CreateRideSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479B98B25AC444700E35F6E /* CreateRideSB.storyboard */; };
@@ -33,6 +35,9 @@
 		84843E6325AC3D390073763C /* RidesVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84843E6225AC3D390073763C /* RidesVc.swift */; };
 		84843E6D25AC3DD80073763C /* CreateRideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84843E6C25AC3DD80073763C /* CreateRideVC.swift */; };
 		84843E7225AC3DE70073763C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84843E7125AC3DE70073763C /* SettingVC.swift */; };
+		84E38CA025AE0DB200EF3454 /* RideVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E38C9F25AE0DB200EF3454 /* RideVCViewModel.swift */; };
+		84E38CAA25AE169400EF3454 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E38CA925AE169400EF3454 /* UITableViewCell.swift */; };
+		84E38CAF25AE16C800EF3454 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E38CAE25AE16C800EF3454 /* UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		843CBEE025ADBD970026573B /* CoreDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBase.swift; sourceTree = "<group>"; };
+		846AB2C325AECE2A00D1FC27 /* RideDataTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDataTableCell.swift; sourceTree = "<group>"; };
+		846AB2C425AECE2A00D1FC27 /* RideDataTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RideDataTableCell.xib; sourceTree = "<group>"; };
 		8479B98125AC42B200E35F6E /* RideHistorySb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RideHistorySb.storyboard; sourceTree = "<group>"; };
 		8479B98625AC43B900E35F6E /* SettingsSb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsSb.storyboard; sourceTree = "<group>"; };
 		8479B98B25AC444700E35F6E /* CreateRideSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateRideSB.storyboard; sourceTree = "<group>"; };
@@ -85,6 +92,9 @@
 		84843E6225AC3D390073763C /* RidesVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesVc.swift; sourceTree = "<group>"; };
 		84843E6C25AC3DD80073763C /* CreateRideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRideVC.swift; sourceTree = "<group>"; };
 		84843E7125AC3DE70073763C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		84E38C9F25AE0DB200EF3454 /* RideVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideVCViewModel.swift; sourceTree = "<group>"; };
+		84E38CA925AE169400EF3454 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		84E38CAE25AE16C800EF3454 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				84843E6225AC3D390073763C /* RidesVc.swift */,
+				846AB2C325AECE2A00D1FC27 /* RideDataTableCell.swift */,
+				846AB2C425AECE2A00D1FC27 /* RideDataTableCell.xib */,
+				84E38C9F25AE0DB200EF3454 /* RideVCViewModel.swift */,
 			);
 			path = Rides;
 			sourceTree = "<group>";
@@ -267,6 +280,8 @@
 				8479B99B25AC50EB00E35F6E /* UIView.swift */,
 				8479B9BD25AC86CC00E35F6E /* UICollectionView.swift */,
 				8479B9C225AC870100E35F6E /* UICollectionViewCell.swift */,
+				84E38CA925AE169400EF3454 /* UITableViewCell.swift */,
+				84E38CAE25AE16C800EF3454 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -377,6 +392,7 @@
 				847A747325AB1EC200EF82D9 /* LaunchScreen.storyboard in Resources */,
 				847A747025AB1EC200EF82D9 /* Assets.xcassets in Resources */,
 				8479B98725AC43B900E35F6E /* SettingsSb.storyboard in Resources */,
+				846AB2C625AECE2A00D1FC27 /* RideDataTableCell.xib in Resources */,
 				8479B98225AC42B200E35F6E /* RideHistorySb.storyboard in Resources */,
 				847A746B25AB1EC000EF82D9 /* Main.storyboard in Resources */,
 				8479B98C25AC444700E35F6E /* CreateRideSB.storyboard in Resources */,
@@ -409,8 +425,10 @@
 				84843E6D25AC3DD80073763C /* CreateRideVC.swift in Sources */,
 				8479B9C325AC870100E35F6E /* UICollectionViewCell.swift in Sources */,
 				843CBEE125ADBD970026573B /* CoreDataBase.swift in Sources */,
+				84E38CAA25AE169400EF3454 /* UITableViewCell.swift in Sources */,
 				8479B9BE25AC86CC00E35F6E /* UICollectionView.swift in Sources */,
 				8479B9B025AC6AD200E35F6E /* UIViewController.swift in Sources */,
+				846AB2C525AECE2A00D1FC27 /* RideDataTableCell.swift in Sources */,
 				8479B99225AC4C5300E35F6E /* TabBarController.swift in Sources */,
 				84843E7225AC3DE70073763C /* SettingVC.swift in Sources */,
 				847A746825AB1EC000EF82D9 /* ViewController.swift in Sources */,
@@ -419,8 +437,10 @@
 				847A746425AB1EC000EF82D9 /* AppDelegate.swift in Sources */,
 				84843E6325AC3D390073763C /* RidesVc.swift in Sources */,
 				8479B9B625AC85D700E35F6E /* RideDataCell.swift in Sources */,
+				84E38CA025AE0DB200EF3454 /* RideVCViewModel.swift in Sources */,
 				847A746625AB1EC000EF82D9 /* SceneDelegate.swift in Sources */,
 				8479B99725AC504800E35F6E /* Color.swift in Sources */,
+				84E38CAF25AE16C800EF3454 /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

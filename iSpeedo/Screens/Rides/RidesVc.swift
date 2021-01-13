@@ -8,51 +8,71 @@
 import UIKit
 import CoreData
 
+
+struct RideTableData: Hashable {
+    var name: String
+}
+
+
 class RidesVc: UIViewController {
+
+    fileprivate enum Section {
+        case rides
+    }
+
+    @IBOutlet weak var rideHistoryTable: UITableView!
+    fileprivate var dataSource: UITableViewDiffableDataSource<Section, RawRideData>!
+    var rideData: [RawRideData] = [RawRideData]()
+    var viewModel: RideVCViewModel = RideVCViewModel()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureTableData()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
         self.view.setDefaultBackgroundColor()
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        rideHistoryTable.backgroundColor = .clear
+        updateTableData()
     }
 }
 
+extension RidesVc: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 155
+    }
+}
 
-extension RidesVc: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+extension RidesVc {
+    func updateTableData() {
+        viewModel.fetchRides(completionHandler: { self.rideData = $0 ?? [] })
+        createSnapShot()
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CoreDataBase.default.fetAllRides()?.count ?? 0
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "")
-        cell.backgroundColor = .clear
-        cell.textLabel?.text = "Ride \(indexPath.row)"
-        tableView.backgroundColor = .clear
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    func configureTableData() {
         
-        switch indexPath.row%3 {
-        case 0:
-            CoreDataBase.default.addNewRide(rideData: [.rideTime(time: Date()), .averageSpeed(speed: 12), .distanceCovered(distance: 456)])
-            tableView.reloadData()
-        case 1:
-            guard let rides = CoreDataBase.default.fetAllRides() else { return }
-            print(rides.count)
-        case 2:
-            CoreDataBase.default.clearAllRides()
-            tableView.reloadData()
-        default:
-            break
-        }
+        rideHistoryTable.register(UINib(nibName: RideDataTableCell.identifier,
+                                        bundle: nil),
+                                  forCellReuseIdentifier: RideDataTableCell.identifier)
         
+        dataSource = UITableViewDiffableDataSource<Section,
+                                                   RawRideData>(tableView: rideHistoryTable,
+                                                                           cellProvider: { (table, index, data) -> UITableViewCell? in
+                                                   
+                                                                            guard let cell = table.dequeueReusableCell(withIdentifier: RideDataTableCell.identifier) as? RideDataTableCell else {
+                                                                                return UITableViewCell()
+                                                                            }
+                                                                            cell.configureWith(rideData: self.rideData[index.row])
+                                                                            return cell
+                                                                           })
+    }
+
+    func createSnapShot() {
+        var snapShot = NSDiffableDataSourceSnapshot<Section, RawRideData>()
+        snapShot.appendSections([.rides])
+        snapShot.appendItems(self.rideData)
+        dataSource.apply(snapShot)
     }
 }

@@ -35,6 +35,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Rides" largeTitleDisplayMode="always" id="yEM-hT-dUr"/>
+                    <connections>
+                        <outlet property="rideHistoryTable" destination="kcb-Wv-rfE" id="sRx-rr-H1o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wM-Yg-roh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
