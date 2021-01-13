@@ -78,6 +78,9 @@ class CreateRideVC: UIViewController {
                     self?.rideButtonState = .start
                     self?.viewModel.stopMonitoringLocation()
                     self?.viewModel.saveRideToDb()
+                    self?.showAlert(title: "Ride Completed",
+                                    message: "The ride has been completed and saved to the database",
+                                    okTitle: "Done")
                 }, completion: nil)
             }
             let cancelButton = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
