@@ -67,6 +67,9 @@ extension SettingVC {
                                                                    message: "This will clear the application database", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { (_) in
             CoreDataBase.default.clearAllRides()
+            self.showAlert(title: "Ride Cleared",
+                           message: "The database has been cleared",
+                           okTitle: "Done")
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(okAction)
@@ -78,6 +81,8 @@ extension SettingVC {
         let popUp = PopUp(title: "Select Color",
                           items: AppStrokeColors.allCases) { selectedColor in
             self.viewModel.updateStrokeColor(color: selectedColor)
+            self.showAlert(title: "Stroke Updated",
+                           message: "Stroke color has been Updated", okTitle: "Done")
         }
         self.present(popUp, animated: true, completion: nil)
     }
