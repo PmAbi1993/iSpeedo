@@ -12,13 +12,23 @@ class SettingVC: UIViewController {
     var itemsToPlot: [SettingsItems] = SettingsItems.allCases
     var viewModel: SettingsViewModel = SettingsViewModel()
     
+    @IBOutlet weak var settingsTableView: UITableView!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.view.setDefaultBackgroundColor()
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+   
+        settingsTableView.register(UINib(nibName: "SettingsTableCell",
+                                         bundle: nil),
+                                   forCellReuseIdentifier: SettingsTableCell.identifier)
+        settingsTableView.backgroundColor = .clear
+    
     }
     
 }
@@ -31,9 +41,13 @@ extension SettingVC: UITableViewDelegate, UITableViewDataSource {
         return itemsToPlot.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: "")
-        cell.textLabel?.text = itemsToPlot[indexPath.row].title
+        guard let cell: SettingsTableCell = tableView.dequeueReusableCell(withIdentifier: SettingsTableCell.identifier) as? SettingsTableCell else { return UITableViewCell() }
+        cell.configureWith(title: self.itemsToPlot[indexPath.row].title)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

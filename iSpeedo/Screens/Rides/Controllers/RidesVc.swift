@@ -67,13 +67,6 @@ extension RidesVc: UITableViewDelegate {
         self.present(popUpImage, animated: true, completion: nil)
         
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let selectedIndex = self.selectedIndex else { return }
-        guard let destination = segue.destination as? ViewController else { return }
-        guard let rideImage = self.rideData[selectedIndex].rideImage else { return }
-        guard let image = UIImage(data: rideImage ) else { return }
-        destination.image = image
-    }
 }
 
 extension RidesVc {

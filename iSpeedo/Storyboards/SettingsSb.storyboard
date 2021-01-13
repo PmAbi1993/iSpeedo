@@ -35,6 +35,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="F11-UY-ylV"/>
+                    <connections>
+                        <outlet property="settingsTableView" destination="Tyi-Bw-w4v" id="x8N-er-qWJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3m-SK-qWe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
