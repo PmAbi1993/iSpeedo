@@ -57,13 +57,20 @@ class MapKitViewModel: NSObject {
         self.mapView?.overlays.forEach({ [weak self] (overlay) in
             self?.mapView?.removeOverlay(overlay)
         })
-//        [self.mapView removeOverlays:self.mapView.overlays]
     }
     
     func saveRideToDb() {
-        
-        CoreDataBase.default.addNewRide(rideData: self.dataModel, startDate: self.startTime)
-        
+        CoreDataBase.default.addNewRide(rideData: self.dataModel, startDate: self.startTime, image: getRideImage())
+    }
+    fileprivate func getRideImage() -> UIImage? {
+        guard let mapView = mapView else {
+            print("MapView not Accessible")
+            return nil }
+        let renderer = UIGraphicsImageRenderer(size: mapView.bounds.size)
+        let image = renderer.image { ctx in
+            mapView.drawHierarchy(in: mapView.bounds, afterScreenUpdates: true)
+        }
+        return image
     }
 }
 

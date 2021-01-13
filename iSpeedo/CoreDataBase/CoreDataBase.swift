@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 import CoreData
 
 class CoreDataBase {
@@ -35,7 +36,7 @@ class CoreDataBase {
         }
     }
 
-    func addNewRide(rideData: [RideData], startDate: Date?) {
+    func addNewRide(rideData: [RideData], startDate: Date?, image: UIImage? = nil) {
         do {
             let rideDbObject = RawRideData(context: self.persistentContainer.viewContext)
             for rideDetail in rideData {
@@ -51,6 +52,7 @@ class CoreDataBase {
                 }
             }
             rideDbObject.startDate = startDate
+            rideDbObject.rideImage = image?.pngData()
             saveContext()
         } catch {
             print(error.localizedDescription)

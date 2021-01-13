@@ -25,7 +25,7 @@ class RidesVc: UIViewController {
     var rideData: [RawRideData] = [RawRideData]()
     var viewModel: RideVCViewModel = RideVCViewModel()
     
-    
+    var selectedIndex: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableData()
@@ -43,6 +43,27 @@ class RidesVc: UIViewController {
 extension RidesVc: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 155
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+       
+        
+        
+        guard let rideImage = self.rideData[indexPath.row].rideImage else { return }
+        guard let image = UIImage(data: rideImage ) else { return }
+        let popUpImage = PopUpImageView()
+               popUpImage.configureWith(image: image )
+        popUpImage.modalPresentationStyle = .overCurrentContext
+        self.present(popUpImage, animated: true, completion: nil)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedIndex = self.selectedIndex else { return }
+        guard let destination = segue.destination as? ViewController else { return }
+        guard let rideImage = self.rideData[selectedIndex].rideImage else { return }
+        guard let image = UIImage(data: rideImage ) else { return }
+        destination.image = image
     }
 }
 
